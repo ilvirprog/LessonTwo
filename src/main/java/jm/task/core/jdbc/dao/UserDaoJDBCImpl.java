@@ -27,11 +27,11 @@ public class UserDaoJDBCImpl implements UserDao {
         Statement statement = null;
 
         String sql = "CREATE TABLE if not exists Users (" +
-                "  `id` BIGINT(64) NOT NULL AUTO_INCREMENT," +
-                "  `name` VARCHAR(45) NULL," +
-                "  `lastName` VARCHAR(45) NULL," +
-                "  `age` TINYINT(3) NOT NULL," +
-                "  PRIMARY KEY (`id`));";
+                "`id` BIGINT(64) NOT NULL AUTO_INCREMENT," +
+                "`name` VARCHAR(45) NULL," +
+                "`lastName` VARCHAR(45) NULL," +
+                "`age` TINYINT(3) NOT NULL," +
+                "PRIMARY KEY (`id`));";
         try {
             statement = connection.createStatement();
             statement.executeUpdate(sql);
